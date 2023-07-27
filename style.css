@@ -1,59 +1,70 @@
+/* Global Styles */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  margin: auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
 }
-/* Responsive Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
 /* Header */
-.header {
-  background-color: #333;
+header {
+  background-color: #25b79f;
+  height: 100vh;
   color: #fff;
   text-align: center;
   padding: 20px;
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.navbar-brand {
-  font-size: 24px;
-  margin: 0;
+.navbar.solid {
+  background-color: #07374a;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.navbar .logo {
+  color: #f0f0e6;
+  font-size: 2rem;
 }
 
 .menu-items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  list-style: none;
 }
 
 .menu-items li {
-  margin-left: 20px;
+  padding: 1rem;
 }
 
-.menu-items li a {
-  color: #fff;
+.menu-items a {
   text-decoration: none;
+  color: #f0f0e6;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.menu-items a:hover {
+  border-bottom: 2px solid #f0f0e6;
 }
 
 /* Home Content */
@@ -63,291 +74,94 @@ body {
   text-align: center;
 }
 
-.name h1 {
-  font-size: 36px;
-  margin: 0;
-}
-
-.name p {
-  font-size: 18px;
-  margin: 20px 0;
-}
-
-/* About Me Section */
-.about-me {
-  background-color: #fff;
-  padding: 80px 0;
-}
-
-.about-me .left-content {
-  width: 100%;
-}
-
-.about-me .right-content {
-  width: 100%;
-}
-
-.about-me .left-content,
-.about-me .right-content {
-  padding: 20px;
-}
-
-.about-heading {
-  font-size: 36px;
-  margin-top: 0;
-}
-
-.about-me p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.skills-heading {
-  font-size: 24px;
-  margin-top: 0;
-}
-
-.skills-bar {
-  margin-top: 20px;
-}
-
-.progress-line {
-  display: block;
-  background-color: #ddd;
-  height: 20px;
-  border-radius: 10px;
-}
-
-.progress-line span {
-  display: block;
-  background-color: #3498db;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.skills-bar .info {
-  margin-bottom: 10px;
-}
-
-/* Portfolio Section */
-#my-works {
-  background-color: #f2f2f2;
-  padding: 80px 0;
-}
-
-.proj-1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.proj-1 img {
-  max-width: 100%;
-}
-
-.proj1-details h2 {
-  font-size: 24px;
-  margin: 20px 0 10px 0;
-}
-
-.proj1-details p {
-  font-size: 16px;
-  margin: 0;
-}
-
-/* Contact Section */
-.contact {
-  background-color: #333;
-  color: #fff;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 36px;
-  margin-top: 0;
-}
-
-.contact p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.contact a {
-  color: #fff;
-  text-decoration: none;
-  margin: 10px;
-  font-size: 24px;
-}
-
-/* Mobile Styles */
-@media (max-width: 767px) {
-  .menu-items {
-    display: none;
-  }
-
-  .navbar-brand {
-    font-size: 20px;
-  }
-
-  .menu-icon {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .menu-active .menu-items {
-    display: block;
-  }
-
-  .about-me .left-content,
-  .about-me .right-content {
-    width: 100%;
-  }
-}
-
-header {
-  background-color: #25b79f;
-  height: 100vh;
-}
-.container {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
-}
-/* ////........Navbar.......//// */
-.navbar {
-  position: fixed;
-  width: 100%;
-  z-index: 500;
-}
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-}
-.menu-items {
-  display: flex;
-}
-.menu-items li {
-  list-style: none;
-  padding: 1rem;
-}
-.menu-items a {
-  text-decoration: none;
-  color: #f0f0e6;
-  font-size: 1.2rem;
-  padding: 0.3rem;
-}
-.menu-items a:hover {
-  border-bottom: 2px solid #f0f0e6;
-}
-.navbar .logo {
-  order: 1;
-  color: #f0f0e6;
-  font-size: 2rem;
-}
-/* ////........Home Content........//// */
 .home-content .name {
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #07374a;
   width: 100%;
   text-align: center;
 }
+
 .home-content .name h1 {
   font-size: 2.2rem;
-  text-align: center;
 }
+
 .home-content .name p {
   color: #f0f0e6;
   font-size: 1.5rem;
 }
+
 .angle-down-icon {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 2rem;
   border: 3px solid #07374a;
   border-radius: 50%;
 }
+
 .angle-down-icon a {
   text-decoration: none;
   color: #07374a;
   padding: 1rem;
 }
-/* ////........About Me........//// */
-.about-me {
-  background-color: #07374a;
-  padding: 6rem 0;
-}
+
+/* About Me and Education Sections */
+.about-me,
 .edu {
   background-color: #07374a;
   padding: 6rem 0;
 }
-.about-me .about-heading {
-  color: #25b79f;
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
-}
+
+.about-me .about-heading,
 .edu .about-heading {
   color: #25b79f;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
 }
+
 .about-content img {
   height: 200px;
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
 }
+
 .about-content p {
   font-size: 1.2rem;
   color: #f0f0e6;
   padding: 0 2.3rem;
   text-align: center;
 }
+
 .skills .skills-heading {
   font-size: 2rem;
   font-weight: 600;
   color: #25b79f;
   text-align: center;
 }
-.about-me .about-content {
-  display: flex;
-  flex-wrap: wrap;
-}
-.edu .about-content {
-  display: flex;
-  flex-wrap: wrap;
-}
-.about-content .left-content {
+
+.about-content .left-content,
+.about-content .right-content {
   flex-basis: 45%;
   text-align: center;
 }
-.about-content .right-content {
-  flex-basis: 45%;
-}
-/* ///.....Skill Bar....../// */
+
+/* Skill Bar */
 .skills-bar {
   padding: 50px 50px;
 }
+
 .skills-bar .bar {
   margin: 50px 0;
 }
+
 .skills-bar .bar .info span {
   font-size: 1rem;
   font-weight: 500;
 }
+
 .skills-bar .bar .info {
   margin-bottom: 8px;
   color: #969602;
 }
+
 .skills-bar .bar .progress-line {
   position: relative;
   height: 40px;
@@ -358,6 +172,7 @@ header {
   transform-origin: left;
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
+
 .bar .progress-line span {
   position: absolute;
   background: #25b79f;
@@ -367,14 +182,17 @@ header {
   transform-origin: left;
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
+
 @keyframes animate {
   100% {
     transform: scaleX(1);
   }
 }
+
 .progress-line .html {
   width: 100%;
 }
+
 .progress-line .css {
   width: 80%;
 }
@@ -382,6 +200,7 @@ header {
 .progress-line .javascript {
   width: 50%;
 }
+
 .progress-line .python {
   width: 30%;
 }
@@ -399,6 +218,7 @@ header {
   border-top-style: #f0f0f0;
   border-top-color: #f0f0f0;
 }
+
 .bar .progress-line span::after {
   position: absolute;
   right: 0;
@@ -410,9 +230,11 @@ header {
   padding: 1px 8px;
   border-radius: 3px;
 }
+
 .progress-line .html::after {
   content: "100%";
 }
+
 .progress-line .css::after {
   content: "80%";
 }
@@ -420,46 +242,12 @@ header {
 .progress-line .javascript::after {
   content: "50%";
 }
+
 .progress-line .python::after {
   content: "30%";
 }
 
-.navbar.solid {
-  background-color: #07374a;
-  transition: background-color 1s ease 0s;
-  box-shadow: 0 0 4px rgb(7 55 74 / 20%);
-  z-index: 500;
-}
-.navbar.solid .navbar-brand {
-  display: inline-block;
-  color: #f0f0e6;
-  transition: color 1s ease 0s;
-}
-.navbar-brand {
-  display: none;
-  color: #f0f0e6;
-  font-weight: 400;
-}
-.work-arrow {
-  margin: 2rem 0;
-}
-.work-arrow a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #25b79f;
-}
-.work-arrow-2 {
-  margin: 2rem 0;
-}
-.work-arrow-2 a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #25b79f;
-  display: none;
-}
-
-/* ////......Contact......///// */
-
+/* Contact Section */
 .contact {
   background: #25b79f;
   position: relative;
@@ -477,7 +265,7 @@ header {
 .contact-content h2 {
   font-size: 2.5rem;
   font-weight: 400;
-  color:black;
+  color: black;
   padding-bottom: 0.5rem;
 }
 
@@ -505,128 +293,36 @@ header {
   color: black;
 }
 
-/* ////......Media query......//// */
-
-@media (max-width: 500px) {
+/* Media Queries */
+@media (max-width: 768px) {
   html {
-    font-size: 60%;
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
 
-  .about-content .left-content {
+  .about-content .left-content,
+  .about-content .right-content {
     flex-basis: 100%;
     text-align: center;
   }
 
-  .about-content .right-content {
-    flex-basis: 100%;
-  }
-
-  .skills {
-    width: 100%;
+  .about-content .right-content h1,
+  .edu .right-content h1 {
+    margin-top: 3.2rem;
   }
 
   .skills-bar .bar .progress-line {
     width: 100%;
   }
 
-  .work-arrow {
+  .work-arrow,
+  .work-arrow-2 {
     display: none;
-  }
-
-  .right-content h1 {
-    margin-top: 3.2rem;
-  }
-
-  .work-arrow-2 a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: #25b79f;
-    display: block;
-    text-align: center;
-  }
-
-  .contact-content {
-    width: 100%;
   }
 }
 
-@media (min-width: 501px) and (max-width: 768px) {
-  html {
-    font-size: 65%;
-  }
-
-  .about-content .left-content {
-    flex-basis: 100%;
-    text-align: center;
-  }
-
-  .about-content .right-content {
-    flex-basis: 100%;
-  }
-
-  .skills {
-    width: 100%;
-  }
-
-  .skills-bar .bar .progress-line {
-    width: 100%;
-  }
-
-  .work-arrow {
-    display: none;
-  }
-
-  .right-content h1 {
-    margin-top: 3.2rem;
-  }
-
- 
 @media (min-width: 769px) and (max-width: 1200px) {
   html {
-    font-size: 70%;
-  }
-
-  .about-content .left-content {
-    flex-basis: 100%;
-    text-align: center;
-  }
-
-  .about-content .right-content {
-    flex-basis: 100%;
-  }
-
-  .skills {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .work-arrow {
-    display: none;
-  }
-
-  .left-content h1 {
-    margin-top: 3.2rem;
-    text-align: center;
-  }
-
-  .right-content h1 {
-    margin-top: 3.2rem;
-    text-align: center;
-  }
-
-  .work-arrow-2 a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: #25b79f;
-    display: block;
-    text-align: center;
-  }
-
-  .contact-content {
-    width: 100%;
+    font-size: 16px; /* Adjust font size for medium-sized screens */
   }
 }
 
